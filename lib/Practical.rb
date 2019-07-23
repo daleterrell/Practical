@@ -1,7 +1,6 @@
-require "Practical/version"
+require 'nokogiri'
 
-module Practical
-  class Error < StandardError; end
-  # Your code goes here...
-  # lame
-end
+require_relative "Practical/version"
+require_relative './practical/movie'
+require_relative './practical/cli'
+

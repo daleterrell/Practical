@@ -11,8 +11,14 @@ class Movie
     @@all
   end
   
+  def self.scrape_movies
+    movies = []
+    movies << self.scrape_movies
+  end
+  
   def self.new_from_pophorror(url)
     movie = Movie.new
+  end
  
  # def self.create_movie
  #   movie_array = Practical::Scraper.name
