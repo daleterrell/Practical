@@ -27,37 +27,26 @@ class Practical::CLI
     
     case 
     when "1"
-      puts "dellamorte"
+      puts "#{movie[0]}"
     when "2"
-      puts "dellamore"
+      puts "#{movie[1]}"
     when "3"
-      puts "cemetary"
+      puts "#{movie[2]}"
     when "4"
-      puts "man"
+      puts "#{movie[3]}"
     when "5"
-      puts "indeed"
+      puts "#{movie[4]}"
     when "6"
-      puts "italian"
+      puts "#{movie[5]}"
     when "7"
-      puts "horror"
+      puts "#{movie[6]}"
     when "8"
-      puts "is"
+      puts "#{movie[7]}"
     when "9"
-      puts "more"
+      puts "#{movie[8]}"
     when "10"
-      puts "than"
-    when "11"
-      puts "Suspiria"
-    when "12"
-      puts "that"
-    when "13"
-      puts "isn't"
-    when "14"
-      puts "even"
-    when "15"
-      puts "any good.  seriously overrated."
-    when "li"
-      list_movies
+      puts "#{movie[9]}"
+    
     
    
     when "exit"
@@ -65,15 +54,4 @@ class Practical::CLI
       exit
     end
   end
-  
-  def print_movie(movie)
-    puts ""
-    puts "----------- #{movie.name} -----------"
-    puts ""
-    puts "---------------Description--------------"
-    puts ""
-    puts "#{movie.description}"
-    puts ""
-  end
-end
 end
