@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
 
-require_relative '../lib/practical'
+require_relative '../lib/Practical'
 
 Practical::CLI.new.call
