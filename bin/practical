@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
 
-require 'bundler/setup'
+require_relative '../lib/practical'
 
-Practical/Practical::CLI.new.call
+Practical::CLI.new.call
