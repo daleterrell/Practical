@@ -1,4 +1,4 @@
-require 'pry'
+
 class Movie
   attr_accessor :name, :info 
   @@all = []

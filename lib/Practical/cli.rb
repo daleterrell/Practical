@@ -1,4 +1,4 @@
-require 'pry'
+
 class Practical::CLI
   
   def call 

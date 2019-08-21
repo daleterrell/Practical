@@ -1,4 +1,4 @@
-require 'pry'
+
 require 'nokogiri'
 require 'open-uri'
 class Practical::Scraper
