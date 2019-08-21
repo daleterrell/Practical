@@ -17,7 +17,7 @@ class Practical::CLI
     input = gets.strip.downcase
     while input != 0
     input = gets.strip.downcase
-      movie = Practical::Scraper.scraper
+      movie = Practical::scraper
       binding.pry
     puts ""
     puts "---------- Movies #{movie} - #{movie} ----------"
@@ -54,4 +54,5 @@ class Practical::CLI
       exit
     end
   end
+end
 end

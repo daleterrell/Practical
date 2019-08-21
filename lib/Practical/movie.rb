@@ -31,4 +31,3 @@ class Movie
     movie = Practical::Scraper.name
   end
 end
-end
