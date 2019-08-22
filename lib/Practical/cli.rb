@@ -1,5 +1,13 @@
-
 class Practical::CLI
+require 'nokogiri'
+require 'open-uri'
+site = "https://www.imdb.com/list/ls074044963/"
+
+page = Nokogiri::HTML(open(site))
+
+movies = page.css("div.lister-list .lister-item") 
+
+puts movies.count
   
   def call 
     list_movies
@@ -8,7 +16,7 @@ class Practical::CLI
   end
   
   def list_movies
-    puts "The 15 best horror movies made with practical effects!!"
+    puts "The 30 best horror movies made with practical effects!!"
   end
   
   def menu
@@ -26,7 +34,7 @@ class Practical::CLI
     
     case 
     when "1"
-      puts "#{movie[0]}"
+      puts "#{movie[1]}"
     when "2"
       puts "#{movie[1]}"
     when "3"
