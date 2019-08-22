@@ -1,33 +1,20 @@
-
-class Movie
+class Practical::Movie
   attr_accessor :name, :info 
-  @@all = []
   
-  def initialize
-    @@all << self
-  end
-  
-  def self.all
-    @@all
-  end
+  def self.list 
+    self.scrape_movies 
+  end 
   
   def self.scrape_movies
     movies = []
-    movies << self.scrape_movies
-  end
+    
+    movies << self.scrape_screenrant
+  end 
   
-  def self.new_from_pophorror(url)
-    movie = Movie.new
+  def self.scrape_screenrant
+    doc = Nokogiri::HTML(open("https://screenrant.com/horror-movies-used-practical-effects-no-cgi/"))
+    name = doc.search("item-title.art-body-content.article-body.article.page_content.w-content.w-website").text
+    info = doc.search("p item-title.art-body-content.article-body.article.page_content.w-content.w-website").text
   end
- 
- # def self.create_movie
- #   movie_array = Practical::Scraper.name
- #   movie_array.collect do |movie_hash|
- #     self.new(movie_hash)
- #   end
- # end
-  
-   def self.name
-    movie = Practical::Scraper.name
-  end
-end
+end 
+    
