@@ -2,7 +2,6 @@
 class Practical::CLI
   
   def call 
-    puts "practical horror movies"
     list_movies
     menu
     goodbye

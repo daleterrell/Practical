@@ -15,9 +15,9 @@ class Practical::Movie
   end 
   
   def self.scrape_screenrant
-    doc = Nokogiri::HTML(open("https://screenrant.com/horror-movies-used-practical-effects-no-cgi/"))
-    name = doc.search("item-title.art-body-content.article-body.article.page_content.w-content.w-website").text
-    info = doc.search("p item-title.art-body-content.article-body.article.page_content.w-content.w-website").text
+    doc = Nokogiri::HTML(open("https://www.imdb.com/list/ls074044963/"))
+    name = doc.search("h3").text
+    info = doc.search("p class").text
   end
 end 
     
