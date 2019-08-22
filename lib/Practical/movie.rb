@@ -7,8 +7,11 @@ class Practical::Movie
   
   def self.scrape_movies
     movies = []
-    
+    name = []
+    info = []
     movies << self.scrape_screenrant
+    name << self.scrape_screenrant
+    info << self.scrape_screenrant
   end 
   
   def self.scrape_screenrant
