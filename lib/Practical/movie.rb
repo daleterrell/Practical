@@ -8,10 +8,12 @@ movies = page.css("div.lister-list .lister-item")
 
 puts movies.count
 
-# things.each do |thing|
-#   title = thing.css("div.title").text.strip
-#   puts title
-# end
+movies.each do |thing|
+   title = thing.css("div.title").text.strip
+   puts title
+end
+
+info = page.css("p class")
 
  #enter a selector that you know you want to use in your scrape - i.e. div.main-content  or h1.title 
 
