@@ -2,9 +2,9 @@ class Practical::CLI
 require 'nokogiri'
 require 'open-uri'
 
-puts movies.count
   
   def call 
+    Practical::Scraper.new.get_movies
     list_movies
     menu
     goodbye
@@ -19,7 +19,7 @@ puts movies.count
     input = gets.strip.downcase
     while input != 0
     input = gets.strip.downcase
-      movie = Practical::scraper
+      movies = Practical::Scraper
       binding.pry
     puts ""
     puts "---------- Movies #{movie} - #{movie} ----------"
