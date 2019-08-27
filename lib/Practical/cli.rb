@@ -1,11 +1,6 @@
 class Practical::CLI
 require 'nokogiri'
 require 'open-uri'
-site = "https://www.imdb.com/list/ls074044963/"
-
-page = Nokogiri::HTML(open(site))
-
-movies = page.css("div.lister-list .lister-item") 
 
 puts movies.count
   
@@ -16,7 +11,7 @@ puts movies.count
   end
   
   def list_movies
-    puts "The 30 best horror movies made with practical effects!!"
+    puts #{movies}
   end
   
   def menu
@@ -34,25 +29,25 @@ puts movies.count
     
     case 
     when "1"
-      puts "#{movie[1]}"
+      puts "#{movies[0]}"
     when "2"
-      puts "#{movie[1]}"
+      puts "#{movies[1]}"
     when "3"
-      puts "#{movie[2]}"
+      puts "#{movies[2]}"
     when "4"
-      puts "#{movie[3]}"
+      puts "#{movies[3]}"
     when "5"
-      puts "#{movie[4]}"
+      puts "#{movies[4]}"
     when "6"
-      puts "#{movie[5]}"
+      puts "#{movies[5]}"
     when "7"
-      puts "#{movie[6]}"
+      puts "#{movies[6]}"
     when "8"
-      puts "#{movie[7]}"
+      puts "#{movies[7]}"
     when "9"
-      puts "#{movie[8]}"
+      puts "#{movies[8]}"
     when "10"
-      puts "#{movie[9]}"
+      puts "#{movies[9]}"
     
     
    
