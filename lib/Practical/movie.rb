@@ -4,6 +4,7 @@ site = "https://www.imdb.com/list/ls074044963/"
 
 page = Nokogiri::HTML(open(site))
 
+movie.url = "https://www.imdb.com/list/ls074044963/"
 movies = page.css("div.lister-list .lister-item") 
 
 puts movies.count
