@@ -9,10 +9,9 @@ def self.scrape_imdb
   page = Nokogiri::HTML(open("https://www.imdb.com/list/ls074044963/"))
     movies = page.css(".lister-list .lister-item")
     movies.each do |movie|
-    title = movie.css("div.title").text.strip
+    title = movie.css(".lister-item-header a").text.strip
     info = movie.css("p").text.strip
     movie = Practical::Movies.new(title, info)
-    binding.pry
   end
 end 
 
