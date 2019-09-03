@@ -1,4 +1,5 @@
 class Practical::Movies
+  attr_accessor :title, :info 
   require 'nokogiri'
   require 'open-uri'
   site = "https://www.imdb.com/list/ls074044963/"
