@@ -5,7 +5,14 @@ site = "https://www.imdb.com/list/ls074044963/"
 
 page = Nokogiri::HTML(open(site))
 
+
 def get_movies
+  movies = []
+  movies << self.scrape_imdb
+  movies 
+end
+
+def self.scrape_imdb
   page = Nokogiri::HTML(open("https://www.imdb.com/list/ls074044963/"))
   movies = page.css(".lister-list .lister-item")
   movies.each do |movie|
