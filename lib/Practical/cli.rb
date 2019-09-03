@@ -1,10 +1,12 @@
 class Practical::CLI
 require 'nokogiri'
 require 'open-uri'
+require 'pry'
 
   
   def call 
-    Practical::Scraper.new.get_movies
+    Practical::Scraper.get_movies
+ #   binding.pry
     list_movies
     menu
     goodbye
@@ -26,19 +28,18 @@ require 'open-uri'
   end
   
   def menu
-    input = nil 
-    while input != "exit"
-      puts "What number movie would you like more information about?"
-      input = gets.strip.downcase
-      if input.to_i > 0
-        puts @movies[input.to_i-1]
-      elsif input == "list"
-        list_movies
+    # input = nil 
+    # while input != "exit"
+    #   puts "What number movie would you like more information about?"
+    #   input = gets.strip.downcase
+    #   if input.to_i > 0
+    #     puts @movies[input.to_i-1]
+    #   elsif input == "list"
+    #     list_movies
      
-    puts "Would you like to see information on another movie? Enter Y or N"
+    # puts "Would you like to see information on another movie? Enter Y or N"
     
   end
 end
 end
-end
-end
+

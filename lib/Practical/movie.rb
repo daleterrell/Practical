@@ -4,21 +4,13 @@ class Practical::Movies
   require 'open-uri'
   site = "https://www.imdb.com/list/ls074044963/"
 
-  page = Nokogiri::HTML(open(site))
-
-  movies = page.css("div.lister-list .lister-item") 
-
-  puts movies.count
-
-  movies.each do |thing|
-     title = thing.css("div.title").text.strip
-     puts title
-  end
-
-  info = page.css("p class")
+  def initialize (title, info) 
+    @title = title
+    @info = info 
+  end 
 
 
-#enter a selector that you know you want to use in your scrape - i.e. div.main-content  or h1.title 
+#enter a selector that you know you want to use in your scrape - i.e. div.main-content  or h1
 
 #if the result is an empty array [], the content you want is probably being loaded with javascript
 
