@@ -1,7 +1,6 @@
 class Practical::CLI
 require 'nokogiri'
 require 'open-uri'
-require 'pry'
 
   
   def call 
@@ -23,7 +22,7 @@ require 'pry'
   def list_movies
     puts "#{movies}"
     @movies = Practical::Movies
-    @movies.each.with_index(1) do |movies, i|
+    @movies.each.with_index(1) do {movies i}
     puts "#{i}, #{movies}"
   end
   
@@ -41,5 +40,5 @@ require 'pry'
     
   end
 end
-end
+
 
