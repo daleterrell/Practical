@@ -27,18 +27,19 @@ require 'open-uri'
   end
   
   def menu
-    # input = nil 
-    # while input != "exit"
-    #   puts "What number movie would you like more information about?"
-    #   input = gets.strip.downcase
-    #   if input.to_i > 0
-    #     puts @movies[input.to_i-1]
-    #   elsif input == "list"
-    #     list_movies
+     input = nil 
+     while input != "exit"
+       puts "What number movie would you like more information about?"
+       input = gets.strip.downcase
+       if input.to_i > 0
+         puts @movies[input.to_i-1]
+       elsif input == "list"
+         list_movies
      
-    # puts "Would you like to see information on another movie? Enter Y or N"
-    
+     puts "Would you like to see information on another movie? Enter Y or N"
+    end  
   end
+end
 end
 
 
