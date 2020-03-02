@@ -22,8 +22,8 @@ require 'open-uri'
   def list_movies
     puts "#{movies}"
     @movies = Practical::Movies
-    @movies.each.with_index(1) do {movies i}
-    puts "#{i}, #{movies}"
+#    @movies.each.with_index(1) do {movies i}
+#    puts "#{i}, #{movies}"
   end
   
   def menu
