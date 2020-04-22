@@ -6,7 +6,7 @@ class Practical::Scraper
 #page = Nokogiri::HTML(open(site))
 
 def self.scrape_movies
-      index_page = Nokogiri::HTML(open("https://editorial.rottentomatoes.com/guide/best-movies-of-2018/"))
+      index_page = Nokogiri::HTML(open("https://editorial.rottentomatoes.com/guide/84-best-80s-horror-movies/"))
 
       array_of_movies = index_page.css("div.countdown-item")
 
