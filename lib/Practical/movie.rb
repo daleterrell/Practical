@@ -1,29 +1,30 @@
 class Practical::Movies
-  attr_accessor :title, :info 
-  require 'nokogiri'
-  require 'open-uri'
-  site = "https://www.imdb.com/list/ls074044963/"
+  attr_accessor :title, :rating, :critic, :url, :directed_by, :id
+  attr_reader :reviews
   @@all = []
 
-  def initialize (title, info) 
-    @title = title
-    @info = info 
-  end 
+  def initialize(att_hash)
+   # @title = att_hash[:title]
+    #@rating = att_hash[:rating]
 
-  def self.all 
-   @@all
+    att_hash.each do |key, value|
+      self.send("#{key}=", value)
+    end
+    @reviews = []
+    self.save
   end
 
-#enter a selector that you know you want to use in your scrape - i.e. div.main-content  or h1
+  def save
+    @@all << self
+    self
+  end
 
-#if the result is an empty array [], the content you want is probably being loaded with javascript
+  def self.all
+    @@all
+  end
 
-
-#.text works on an array
-#['href'] does NOT work on an array 
-
-
-#if it's a really long result and you can't tell if the content you want is in there, try chaining .text to the end.
-  #for example: 
-    #page.css("div.main-content").text  OR  #page.css("div.main-content")[0].text
+  def add_review(rev)
+    @reviews << rev
+    rev.movie = self
+  end
 end
