@@ -10,7 +10,7 @@ def self.scrape_movies
 
       array_of_movies = index_page.css("div.countdown-item")
 
-      array_of_movies[0...100].each_with_index do |movie_card, index|
+      array_of_movies[0...84].each_with_index do |movie_card, index|
         attributes = {
           title: movie_card.css("div.article_movie_title a")[0].children.text ,
           url: movie_card.css("div.article_movie_title a")[0].attributes['href'].value,
