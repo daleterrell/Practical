@@ -17,7 +17,7 @@ require 'open-uri'
 #  end
   
   def greeting
-    puts "Welcome to the world of practical effects in horror movies"
+    puts "Welcome to the world of practical effects"
   end
   
   def scrape_movies
