@@ -6,8 +6,6 @@ require_relative './Practical/movie.rb'
 require_relative './Practical/cli.rb'
 require_relative './Practical/scraper.rb'
 
-require_relative "movie_review/review.rb"
-
 
 
 

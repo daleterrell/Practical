@@ -65,8 +65,5 @@ require 'open-uri'
       puts "#{index}. #{movie.title}"    # if index <= 100
     end
   end
-  
 end
-end
-
 
