@@ -60,14 +60,7 @@ require 'open-uri'
   end
  
   def list_movies
-    puts "Here are the top 100 movies:"
-    @sorted_movies.each.with_index(1) do |movie,index|
-      puts "#{index}. #{movie.title}"    # if index <= 100
-    end
-  end
-  
-  def list_movies
-    puts "Here are the top 100 movies:"
+    puts "Here are the best 84 movies that use practical effects:"
     @sorted_movies.each.with_index(1) do |movie,index|
       puts "#{index}. #{movie.title}"    # if index <= 100
     end
